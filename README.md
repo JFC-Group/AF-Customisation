@@ -108,10 +108,9 @@ ovsdb-client transact '[ "Open_vSwitch", { "op": "update", "table": "Wifi_Radio_
 ### Disable wifi auto restart
 
 ```
-pkill -f healthcheck.service 
-mv /usr/opensync/scripts/healthcheck.service /usr/opensync/scripts/healthcheck.service.bak
-echo -e "#!/bin/sh\nexit 0" > /usr/opensync/scripts/healthcheck.service
-chmod +x /usr/opensync/scripts/healthcheck.service
+vim /usr/opensync/scripts/healthcheck.funcs.sh
 ```
+Edit the file and set the value of Healthcheck_Enabled() to false instead of true.
+
 
 ### There is a script in this repo too, and you can just use that. Remember to have openssl, tar, and gunzip installed. The script only works in UNIX-like systems (Linux, macOS, BSD, etc.)
