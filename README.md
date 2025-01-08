@@ -6,9 +6,9 @@
 
 ## Table Of Contents:
 
-1. [ACQUIRING ROOT ACCESS OF IDU](ACQUIRING%20ROOT%20ACCESS%20OF%20IDU.md)
-2. [ACCESSING THE ODU VIA THE IDU](ACCESSING%20THE%20ODU%20VIA%20THE%20IDU.md)
-3. [INSTALLING LUCI ON IDU](INSTALLING%20LUCI%20ON%20IDU.md) 
-5. [RESETTING THE ROUTER VIA SSH](RESETTING%20THE%20ROUTER%20VIA%20SSH.md)
-6. [UART ACCESS IDU](UART%20ACCESS%20IDU.md)
+1. [Get-Root-Access-JAF-IDU](Get-Root-Access-JAF-IDU.md)
+2. [Accessing-The-ODU-Via-The-IDU](Accessing-The-ODU-Via-The-IDU.md)
+3. [Installing-Luci-JAF-IDU](Installing-Luci-JAF-IDU.md) 
+5. [Resetting-The-Router-Via-Ssh](Resetting-The-Router-Via-Ssh.md)
+6. [Uart-Access-JAF-IDU](Uart-Access-JAF-IDU.md)
 
