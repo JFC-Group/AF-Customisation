@@ -1,6 +1,6 @@
 ## 1. Strip apart the idu and find the 4 uart pins; usually marked on most models of idu. Some models have pins already soldered onto the pads so you don't have to.
 
-![[UART pin.png]]
+![UART pin](Assets/UART_pin.png)
 
 ## 2. Only connect Rx , Tx and GND ; do not connect 3.3v pin to your usb-to-ttl or whatever device you are using as a serial converter as it may fry your idu.
 
