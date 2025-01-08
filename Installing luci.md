@@ -1,10 +1,16 @@
-# DO NOT TRY THIS JUST ON A WHIM YET; IT IS STILL UNDER TESTING AND IF SOMETHING BREAK YOU ARE ON YOUR OWN
-
+### PERFORM Step:0 FIRST BECAUSE IF YOU ACCIDENTALLY FILL UP THE STORAGE YOUR ONLY OPTION WOULD BE TO RESET THE ROUTER. YOU WILL ENCOUNTER <U>500 INTERNAL SERVER ERROR</U> IF YOU MESSUP THE INSTALLATION IN BETWEEN AND YOU WONT BE ABLE TO RESET THE ROUTER VIA WEBUI; YOUR ONLY OPTION WOULD BE THE PHYSICAL RESET USING THE RESET BUTTON OR [[RESETTING THE ROUTER VIA SSH]]
+## Step:0 
+* Necessary because the internal storage is quite less and doesn't give us much space to work with 
+* Expanding the root via using a usb overlay (did not find any other better way which did not involve risking the router):
+	 * Follow this official guide CAREFULLY and you will be good to go 
+	   https://openwrt.org/docs/guide-user/additional-software/extroot_configuration
+	   
 ## Step:1 
 * Remove these Folders ` rm -rf /www`
+
 ## Step:2 
-* ### Check if uhttpd is running `ps aux | grep uhttpd*`
-* ### Uninstalling Luci and all Luci related stuff:
+* #### Check if uhttpd is running `ps aux | grep uhttpd*`
+* #### Uninstalling Luci and all Luci related stuff:
 ``` bash
 opkg remove --force-depends \
 liblucihttp-lua \
@@ -48,13 +54,13 @@ rm -f /etc/config/luci
 
 
 ## Step:3 
-* ### Reinstalling the Luci packages:
+* #### Reinstalling the Luci packages:
 ``` sh
 opkg update
 opkg install --force-overwrite luci
 ```
 
-* You will receive this error 
+* You will receive this error (IF NOT JUST MOVE ALONG)
 ``` sh
 Collected errors:
  * resolve_conffiles: Existing conffile /etc/config/luci is different from the conffile in the new package. The new conffile will be placed at /etc/config/luci-opkg.
@@ -71,11 +77,7 @@ cgi-bin      index.html   luci-static
 
 
 
-
-BONUS: 
- 1. Expanding the root via using a usb overlay (did not find any other better way which did not involve risking the router):
-	 * Follow this official guide CAREFULLY and you will be good to go 
-	   https://openwrt.org/docs/guide-user/additional-software/extroot_configuration
-2. Use Btop if you want a nice cli based resource monitor either compile your own or can simply use the one i compiled for mine in the bin folder 
+### BONUS: 
+1. Use Btop if you want a nice cli based resource monitor either compile your own or can simply use the one i compiled for mine in the bin folder 
 	* link: https://drive.google.com/drive/folders/1Om93J8oUOOn1MDMKNvqpbZeXX_Mmn0FK?usp=sharing
 

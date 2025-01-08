@@ -6,3 +6,6 @@ dec_backup_og.tar.gz
 
 # Ignore extracted backup directories
 extracted_backup/
+
+# Ignore obsidian files 
+.obsidian
