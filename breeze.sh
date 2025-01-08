@@ -100,7 +100,13 @@ cp "$SHADOW_FILE" "${SHADOW_FILE}.bak"
 
 # Update the root password hash in the shadow file
 echo "Step 3: Setting new root password hash..."
-sed -i "s|^root:[^:]*:|root:${NEW_PASSWORD_HASH}:|" "$SHADOW_FILE"
+
+# check if macos
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  sed -i '' "s|^root:[^:]*:|root:${NEW_PASSWORD_HASH}:|" "$SHADOW_FILE"
+else
+  sed -i "s|^root:[^:]*:|root:${NEW_PASSWORD_HASH}:|" "$SHADOW_FILE"
+fi
 check_success "Updating root password hash"
 
 # Ensure the mwan3.user file exists, or prompt for alternative methods
