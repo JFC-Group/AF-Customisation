@@ -2,14 +2,17 @@
 
 _Disclaimer: This is ONLY for educational purposes, No one is responsible for any type of damage. So be aware._
 
-**WARNING: Perform step 0 first because if you accidentally fill up the storage your only option would be to reset the router. You will encounter _500 internal server error_ if you messup the installation in between and you wont be able to reset the router via webui; your only option would be the physical reset using the reset button or [Resetting the router via SSH](Resetting-The-Router-Via-SSH.md)**
+**WARNING: Perform step 0 first because if you accidentally fill up the storage your only option would be to reset the router. You will encounter _500 internal server error_ if you messup the installation in between and you wont be able to reset the router via webui; your only option would be the physical reset using the reset button or [Resetting the router via SSH](JAF-IDU-Reset-Via-SSH.md)**
 
 ## Step 0
 
 - Necessary because the internal storage is quite less and doesn't give us much space to work with
 
 - Expanding the root via using a usb overlay (did not find any other better way which did not involve risking the router):
-  - Follow [this official guide](https://openwrt.org/docs/guide-user/additional-software/extroot_configuration) **CAREFULLY** and you will be good to go
+- Follow [this official guide](https://openwrt.org/docs/guide-user/additional-software/extroot_configuration) **CAREFULLY** and you will be good to go
+- Reboot the device and run `df -h` and if you see your pendrive mounted at `/` then you are good to move ahead
+- Facing error ???? check [Troubleshooting](##Troubleshooting) section 
+
 
 ## Step 1
 
@@ -112,3 +115,12 @@ Many things dont work in the LuCI interface yet because J\*\* has used custom Lu
 1. Use `btop` if you want a nice CLI based resource monitor. You can either compile your own or you can simply use the one @pokewizardSAM compiled in the bin folder.
 
     Link: <https://drive.google.com/drive/folders/1Om93J8oUOOn1MDMKNvqpbZeXX_Mmn0FK?usp=sharing>
+
+## Troubleshooting: 
+* If you are facing Issues such as overlay not activating upon boot then follow the below steps to resolve them. Keep the dmesg output ready and search for `extroot` 
+* ##### 1. extroot-not-configured:
+	* Check the dmesg output and if that contains this message then you have Problematic configs. to check that do a `cat /etc/config/fstab` ; this should have rwm and extroot with a unique uuid defined with a `option target '/overlay'` in extroot section. If yours doesn't have that, then add it manually. For example see below 
+	* ![](assets/Extroot-Fstab-Config.png)
+* ##### 2. ubiblock0_1 not found:
+	* To mitigate this error you have to Reflash your stock fw images. you can get a copy of fw from here https://small.fileditchstuff.me/s18/TGJFgrgUrrolDsBKDatu.tar.gz 
+	* Extract the archive and flash your respective fw and then retry the extroot guide again 
