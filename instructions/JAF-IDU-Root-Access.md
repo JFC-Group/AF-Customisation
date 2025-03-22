@@ -99,6 +99,12 @@ ovsdb-client transact '[ "Open_vSwitch", { "op": "update", "table": "Wifi_Radio_
 ```shell
 ovsdb-client transact '[ "Open_vSwitch", { "op": "update", "table": "Wifi_Radio_Config", "where": [], "row": { "enabled": true } } ]'
 ```
+### Change SSID
+
+```shell
+ovsdb-client transact '[ "Open_vSwitch", { "op": "update", "table": "Wifi_VIF_Config", "where": [["if_name", "==", "home-ap-50"]], "row": { "ssid": "MyHomeWiFi_5G" } } ]'
+```
+_Note: for 2.4GHz use `home-ap-24` and for 5Ghz use `home-ap-50`_
 
 ### Disable wifi auto restart
 
