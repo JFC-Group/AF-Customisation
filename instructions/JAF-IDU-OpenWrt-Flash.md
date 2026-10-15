@@ -275,13 +275,13 @@ This clears the dual-boot/OpenWrt env vars set earlier and restores the stock bo
 
 ### Fixing missing/wrong MAC address (IDU6101 / IDU6401)
 
-If your MFG or u-boot-env MAC address is missing or wrong — usually from flashing with the wrong method or image — flash the sysupgrade image, then over SSH run:
+If your MFG or u-boot-env MAC address is missing or wrong — usually from flashing with the wrong method or image — flash the sysupgrade image(download MAC-Fixed Build from the [firmware table](https://github.com/JFC-Group/AF-Customisation/blob/main/instructions/List-OF-IDU's-and-ODU's.md#firmware-links)), then over SSH run:
 
 ```shell
 /etc/mac-fix.sh
 ```
 
-Select your model, then enter the MAC address printed on the label on the back of the router's box. It'll then ask to reset — press `y` to confirm.
+Select your model, then enter the MAC address printed on the label on the back of the router's box. It'll then ask to reset — press `y` to confirm — a final reset is required to properly apply the Label MAC.
 
 ### Qualcomm IDUs (IPQ9554 — IDU6111, 6411, 6611, 6911, 6711, 6811)
 
