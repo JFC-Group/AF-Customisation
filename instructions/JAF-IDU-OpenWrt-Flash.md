@@ -42,7 +42,6 @@ If the latest FW method doesn't work on your model and you're on firmware newer 
    Input Password==>admin
    ```
 
-   > [!NOTE]
    > This is based on current firmware behavior and may change with a future update.
 
 4. **Confirm "Run image after upgrading?"** with `y`.
@@ -69,7 +68,6 @@ If the latest FW method doesn't work on your model and you're on firmware newer 
    Input file name: <e.g. 6101.img>
    ```
 
-   > [!NOTE]
    > Only the `.img` file is needed here, not the `.sig` file.
 
 The router will download the image over TFTP and flash it, then boot into R.2.0.9. From here, follow [breeze.sh](JAF-IDU-Root-Access.md) to get root.
@@ -283,7 +281,7 @@ If your MFG or u-boot-env MAC address is missing or wrong — usually from flash
 /etc/mac-fix.sh
 ```
 
-Select your model, then enter the MAC address printed on the label on the back of the router's box. It'll then ask to reboot — press `y` to confirm.
+Select your model, then enter the MAC address printed on the label on the back of the router's box. It'll then ask to reset — press `y` to confirm.
 
 ### Qualcomm IDUs (IPQ9554 — IDU6111, 6411, 6611, 6911, 6711, 6811)
 
