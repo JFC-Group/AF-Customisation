@@ -60,3 +60,24 @@ Note: This list is still under review, the information in this table maybe be in
 | JODU51643_REL_31_00_00_S | [Download](https://mega.nz/file/PLRzAZYI#XS3CQBLaPiT0yl3AfmX6TBpjsmrMBP4_Ef1FiCAg3Xw) | ✅Unlock FW               |
 | JODU51740_REL_1315_01_28_S | [Download](https://mega.nz/file/XL41kBKa#_kubVpUhX8uhKU2xgAlpwLKWkOpq8XvRvccbwPmhk90)|✅Unlock FW               |
 | JODU51741_REL_1315_01_28_S | [Download](https://mega.nz/file/qaIFXKiY#AUJcvWMmi_nWsyodS5fPgoNlbyFaI1RXynLyUKJMRLM)|✅Unlock FW               |
+
+## Stock OpenWrt Firmware
+
+See [JAF-IDU-OpenWrt-Flash.md](JAF-IDU-OpenWrt-Flash.md) for flashing steps.
+
+### MediaTek (JIDU6101 / JIDU6J01)
+
+**initramfs-kernel.bin / squashfs-sysupgrade.bin**
+
+| Model                    | OpenWrt Firmware Selector | MAC-Fixed Build |
+| -------------------------- | -------------------------- | ------------------ |
+| JIDU6101                   | [Open](https://firmware-selector.openwrt.org/) | [Download](https://mega.nz/file/WXpR2LyI#7JEzfzQdAhtdrYUbUT8M95pXqcZjsga-q7z5nwRp_Hk) |
+| JIDU6J01/6201/6401/6601/6701 | [Open](https://firmware-selector.openwrt.org/) | [Download](https://mega.nz/file/qK41XAKR#tqZxA7hPoGZmZyW6p5UmC3F5m4eJHy8zK2mEgbgfCpw) |
+
+**factory.ubi (For SSH Flashing Method)**
+
+| Model                    | Link       |
+| -------------------------- | ---------- |
+| JIDU6101                   | [Download](https://mega.nz/file/DXY03R6C#LfCcDgQH9Hc8NTGvTKSJd7GgZIsyg-6scmdu0R8J2fI) |
+| JIDU6J01/6201/6401/6601/6701 | [Download](https://mega.nz/file/6DxHDBzS#7uZmAgrsmU49a6fv9_cRf2YThv3mkFMmdCz4F5y5z2k) |
+
