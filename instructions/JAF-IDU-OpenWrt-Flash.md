@@ -156,8 +156,27 @@ fw_setenv dual_boot.slot_0_invalid 1
 fw_setenv dual_boot.slot_1_invalid 1
 fw_setenv ipaddr
 fw_setenv bootdelay 3
+```
+
+
+Then run `fw_printenv` and check the output matches this before doing anything else:
+ 
+```
+bootcmd=ubi read 46000000 kernel;fdt addr $(fdtcontroladdr);fdt rm /signature;bootm
+dual_boot.current_slot=1
+dual_boot.slot_0_invalid=1
+dual_boot.slot_1_invalid=1
+```
+ 
+`ipaddr` should NOT appear in the output.
+ 
+> [!CAUTION]
+> If this output doesn't match, do NOT reboot — the env vars weren't saved properly and rebooting can soft-brick the router, requiring UART to recover. Only proceed to `reboot` once `fw_printenv` matches.
+ 
+```shell
 reboot
 ```
+
 
 Router comes back up as OpenWrt (initramfs). Now flash sysupgrade to make it persistent:
 
