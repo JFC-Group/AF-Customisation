@@ -24,14 +24,14 @@ Reset the device using either of the following methods:
 ### Step 3: Update Passwords on First Login
 
 1. After logging in with the default credentials, the **Update Passwords** page will appear automatically.
-2. Enter the new password in the **Admin Password** field: `[Aa1$(passwd${IFS}-d${IFS}root)]`
-3. Enter the same password in **Confirm Admin Password**: `[Aa1$(passwd${IFS}-d${IFS}root)]`
-4. Enter the guest password in the **Guest Password** field: `[(e.g., Guest123).]`
-5. Enter the same password in **Confirm Guest Password**: `[(e.g., Guest123).]`
+2. Enter the new password in the **Admin Password** field: `Aa1$(passwd${IFS}-d${IFS}root)`
+3. Enter the same password in **Confirm Admin Password**: `Aa1$(passwd${IFS}-d${IFS}root)`
+4. Enter the guest password in the **Guest Password** field: `(e.g., Guest123).`
+5. Enter the same password in **Confirm Guest Password**: `(e.g., Guest123).`
 6. Click **UPDATE** to save the new passwords.
 7. After the passwords have been updated successfully, log in again using the following credentials:
    - **Username:** `admin`
-   - **Password:** `[Aa1$(passwd${IFS}-d${IFS}root)]`
+   - **Password:** `Aa1$(passwd${IFS}-d${IFS}root)`
 8. Click **LOGIN** to access the Web UI.
 
 ### Step 4: Change Password via User Management
@@ -39,8 +39,8 @@ Reset the device using either of the following methods:
 1. In the Web UI, navigate to **Administration → User Management**.
 2. Locate the `admin` user account.
 3. Click the **Change Password** option under the Actions section.
-4. Enter the new password in the **Password** field: `[Cc2$(killall${IFS}dropbear)]`
-5. Enter the same password in the **Confirm Password** field: `[Cc2$(killall${IFS}dropbear)]`
+4. Enter the new password in the **Password** field: `Cc2$(killall${IFS}dropbear)`
+5. Enter the same password in the **Confirm Password** field: `Cc2$(killall${IFS}dropbear)`
 6. Click **SAVE** to apply the changes.
 
 ### Step 5: Login with the Updated Admin Password
@@ -48,7 +48,7 @@ Reset the device using either of the following methods:
 1. Open the Web UI at **http://192.168.31.1**.
 2. Enter the following credentials:
    - **Username:** `admin`
-   - **Password:** `[Cc2$(killall${IFS}dropbear)]`
+   - **Password:** `Cc2$(killall${IFS}dropbear)`
 3. Click **LOGIN** to access the Web UI.
 
 ### Step 6: Change the Admin Password Again
