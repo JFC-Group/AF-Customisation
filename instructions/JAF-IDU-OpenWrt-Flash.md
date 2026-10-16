@@ -14,6 +14,8 @@ _Disclaimer: This is ONLY for educational purposes. Flashing third-party firmwar
 
 If the latest FW method doesn't work on your model and you're on firmware newer than R.3.2.3, downgrade to R.2.0.9 via UART, then use [breeze.sh](JAF-IDU-Root-Access.md).
 
+Check [JAF-IDU-UART-Access.md](https://github.com/JFC-Group/AF-Customisation/blob/main/instructions/JAF-IDU-UART-Access.md) first for your model's UART pin layout and photos before wiring anything up.
+
 > [!CAUTION]
 > **DO NOT CONNECT VCC** when attaching your USB to TTL adapter. Doing so will permanently damage your board.
 
@@ -168,6 +170,8 @@ sysupgrade /tmp/openwrt-mediatek-filogic-jiorouter_ax6000-jidu6j01/jidu6101-squa
 ```
 
 #### Method 2: UART
+
+Check [JAF-IDU-UART-Access.md](https://github.com/JFC-Group/AF-Customisation/blob/main/instructions/JAF-IDU-UART-Access.md) first for your model's UART pin layout and photos before wiring anything up.
 
 ##### Getting U-Boot creds via stock root access
 
