@@ -34,11 +34,11 @@
 **Example of a clean distfeed (22.02):**
 
 ```sh
-src/gz openwrt_base https://downloads.openwrt.org/releases/21.02-SNAPSHOT/packages/aarch64_cortex-a53/base
-src/gz openwrt_luci https://downloads.openwrt.org/releases/21.02-SNAPSHOT/packages/aarch64_cortex-a53/luci
-src/gz openwrt_packages https://downloads.openwrt.org/releases/21.02-SNAPSHOT/packages/aarch64_cortex-a53/packages
-src/gz openwrt_routing https://downloads.openwrt.org/releases/21.02-SNAPSHOT/packages/aarch64_cortex-a53/routing
-src/gz openwrt_telephony https://downloads.openwrt.org/releases/21.02-SNAPSHOT/packages/aarch64_cortex-a53/telephony
+src/gz openwrt_base https://archive.openwrt.org/releases/packages-21.02/aarch64_cortex-a53/base
+src/gz openwrt_luci https://archive.openwrt.org/releases/packages-21.02/aarch64_cortex-a53/luci
+src/gz openwrt_packages https://archive.openwrt.org/releases/packages-21.02/aarch64_cortex-a53/packages
+src/gz openwrt_routing https://archive.openwrt.org/releases/packages-21.02/aarch64_cortex-a53/routing
+src/gz openwrt_telephony https://archive.openwrt.org/releases/packages-21.02/aarch64_cortex-a53/telephony
 ```
 
 **Example of a clean distfeed (19.07):**
